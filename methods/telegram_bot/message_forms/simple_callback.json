@@ -1,0 +1,47 @@
+{
+   "update_id":613056915,
+   "callback_query":{
+      "id":"6269156769243631790",
+      "from":{
+         "id":5754619101,
+         "is_bot":false,
+         "first_name":"人",
+         "username":"TypeHito",
+         "language_code":"ru",
+         "is_premium":true
+      },
+      "message":{
+         "message_id":54,
+         "from":{
+            "id":6263013798,
+            "is_bot":true,
+            "first_name":"Royal Taxi",
+            "username":"RoyalTX_bot"
+         },
+         "chat":{
+            "id":5754619101,
+            "first_name":"人",
+            "username":"TypeHito",
+            "type":"private"
+         },
+         "date":1690177587,
+         "text":"1",
+         "reply_markup":{
+            "inline_keyboard":[
+               [
+                  {
+                     "text":"card",
+                     "callback_data":"1"
+                  },
+                  {
+                     "text":"cash",
+                     "callback_data":"2"
+                  }
+               ]
+            ]
+         }
+      },
+      "chat_instance":"5258068389711218063",
+      "data":"1"
+   }
+}

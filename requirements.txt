@@ -1,0 +1,4 @@
+flask~=2.3.3
+psycopg2~=2.9.7
+requests~=2.31.0
+XlsxWriter~=3.1.2

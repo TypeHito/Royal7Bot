@@ -1,0 +1,28 @@
+{
+  "welcome_text": "RoyalTaxi tomonidan o'tkazilayotgan \uD83C\uDF40Omadli 7\uD83C\uDF40 aksiya haqida to'liq ma'lumot olish uchun ro'yxatdan o'ting!",
+  "send_number":"\uD83D\uDCF1 Raqam yuborish.",
+  "please_send_phone_number": "Quyidagi tugma orqali telefon raqamingizni yuboring!",
+  "re_send_message": "\uD83D\uDCE5 SMS kodni qayta jo'natish.",
+  "re_send_message_err": "\uD83D\uDCE5 SMS kodni qayta jo'natish uchun {} soniya dan so'ng qayta urinib kuring. . .",
+  "please_send_sms_code": "{} raqamiga sms yoborildi iltimos 4 xonalik kodni kiriting!",
+  "login": "Tabriklaymiz siz RoyalTaxi \uD83C\uDF40Omadli 7\uD83C\uDF40 aksiyasining birinchi shartini bajardingiz!\nMenyudan imkoniyatlar bo'limiga o'ting va ikkinchi shartni bajaring.",
+  "un_correct_sms_code": "SMS kod notogri kiritildi qayta urinib kuring!",
+  "un_correct_sms_code_type": "SMS kod 4 raqamdan iborat. . .",
+
+  "main_menu_1": "\uD83D\uDDDD Imkoniyatlarim",
+  "main_menu_2": "\uD83C\uDF81 Sovrinlar",
+  "main_menu_3": "\uD83D\uDECD Aksiya haqida ma'lumot",
+
+  "loading_chance": "Yuklanmoqda. . .",
+  "need_more_chance": "Siz aksiyaga qatnashishingiz uchun  \uD83D\uDCDE  1187  qisqa raqami orqali taxiga {} ta buyurtma berishingiz lozim!",
+  "you_have_chance": "Tabriklaymiz siz aksiyada qatnashmoqdasiz! \nImkoniyatlar soni: {} ta",
+  "gifts": "RoyalTaxi \uD83C\uDF40Omadli 7\uD83C\uDF40 aksiyasi!\n\nAksiya muddati 2023-yil\n7-sentabrdan 7-noyabirgacha\n\nShartlar\n1.Telegramda @royaltaxi7bot dan ro'yhatdan o'tish lozim\n2.1187 qisqa raqami orqali yoki RoyalTaxi mobil ilovasidan 7 ta muvofaqiyatli buyurtma berishingiz kerak\n\nImkoniyatlar\nBoshlang'ich 7 ta buyurtma aksiyada ishtirok etish uchun 1 ta imkoniyat beradi 7 tadan keyingi muvaffaqiyatli buyurtmalar har biri 1 ta imkoniyat beradi.\nHar bir imkoniyat sovrinlarni qo'lga kiritish imkonini oshiradi\n\nSuper sovrin\nUmra ziyoratiga 7 ta yo'llanma\n\nBitta raqam faqat bitta sovringa ega bo'ladi",
+  "main_banner": "AgACAgIAAxkBAAICCmUNrOP8y_ptbuSq_7a3ojFwvJI6AAJN2DEbQS1xSMarn0cyDK6lAQADAgADeAADMAQ",
+
+  "create_post": "Post photo yoki matni kiriting! ",
+  "send_text": "Postni tasdiqlang yoki qo'shimcha matn kiriting!",
+  "accept_post": "\n\npostni tasdiqlang!",
+  "send_post": "Send",
+  "cancel_post": "Canceled!",
+  "server_error": "Serverda xatolik keyinroq urinib ko'ring!"
+}

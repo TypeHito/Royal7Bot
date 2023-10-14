@@ -1,0 +1,33 @@
+valid_chats = [5754619101, 685051853, 545050591]
+valid_users = [5754619101, 685051853]
+
+
+time_out = 3
+
+banner = "AgACAgIAAxkBAAEFouBlDyCvBoYLim3MOGuw0hIxPomIgQACLc8xG1jHeUi8W_FzC9LPXQEAAwIAA3gAAzAE"
+# banner = "AgACAgIAAxkBAAICCmUNrOP8y_ptbuSq_7a3ojFwvJI6AAJN2DEbQS1xSMarn0cyDK6lAQADAgADeAADMAQ"
+
+text = ["7 ta Umra ziyoratiga yo'llanma\n(super sovrin)", "7 ta Televizor", "7 ta Smartfon", "7 ta Aqlli soat",
+        "7 ta Simsiz quloqchin", "7 ta Qo'l soat", "7 ta Vaucher"
+]
+photo = [
+        "AgACAgIAAxkBAAEFosxlDyAd2p6NG3Zab90VdYh79Nm7QwACL88xG1jHeUgxhjH4SjhQkgEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFothlDyBI9LQZ9cj7q0MfNevseKDZcwACMM8xG1jHeUgzd-uqM3CfaAEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFotllDyBgWOA49yCmG76tULlFFefQuwACMc8xG1jHeUjDp5-T6hQnJQEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFotxlDyBvJm8XZlsLCSLPIL7as3JPGgACM88xG1jHeUj5TEdhVaVvuwEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFot1lDyB67hlbuldBVIMjwoXJa4aigwACNM8xG1jHeUg72ZWflGDqZQEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFot5lDyCOpSz0QrVgyGmW5TcMvDQjHAACNc8xG1jHeUgIJYxRctzA7wEAAwIAA3gAAzAE",
+        "AgACAgIAAxkBAAEFot9lDyCc6KZMS3f4DCrnTJTzL7crrAACNs8xG1jHeUir_keMyaFMjQEAAwIAA3gAAzAE"
+]
+# photo = [
+#         "AgACAgIAAxkBAAIB8mUNqxkNnS9ryFzocKvr5RC6FAwfAAL91zEbQS1xSCu2YuQXPu5EAQADAgADeAADMAQ",
+#         "AgACAgIAAxkBAAIB82UNqyo1AAH1ikFkZlfcctsjeCW5cgAC_tcxG0EtcUiUVjBeFpGWJgEAAwIAA3gAAzAE",
+#         "AgACAgIAAxkBAAIB9GUNqzwBAbvV8UVliCfj6_yA-EkEAAL_1zEbQS1xSNobaP0i3GxRAQADAgADeAADMAQ",
+#         "AgACAgIAAxkBAAIB9WUNq1q3_YRCm5QFW5pWFzZCz_1_AAIC2DEbQS1xSAS1cv_tNN3KAQADAgADeAADMAQ",
+#         "AgACAgIAAxkBAAIB9mUNq2fByODuqzcSkFA1038VqAfoAAIE2DEbQS1xSNt75xXlyzGnAQADAgADeAADMAQ",
+#         "AgACAgIAAxkBAAIB92UNq3EYI5R8JmjhBtHPAoa4KnQzAAIG2DEbQS1xSMWgGb1rQbJRAQADAgADeAADMAQ",
+#         "AgACAgIAAxkBAAIB-GUNq318DyWIdNVsLuayKsB-VlN4AAIH2DEbQS1xSFXszLpX4fzzAQADAgADeAADMAQ"
+# ]
+
+
+
