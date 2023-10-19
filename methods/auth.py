@@ -1,4 +1,4 @@
-from core.const import valid_users
+from src.const import valid_users
 
 
 def is_login(user):

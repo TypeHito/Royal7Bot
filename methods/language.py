@@ -1,6 +1,4 @@
 import json
-from methods.telegram_bot.bot_answer import send_message
-from core.const import valid_users
 
 
 valid_langs = ["uz"]

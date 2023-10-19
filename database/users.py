@@ -4,7 +4,7 @@ import datetime
 
 
 def create_user_table():
-    execute = """create table users(
+    execute = f"""create table {user_db_table_name}(
           id serial primary key,
           telegram_id bigint UNIQUE not null,
           phone_number varchar UNIQUE,
