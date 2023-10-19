@@ -26,9 +26,8 @@ def is_flood(user, in_time_out):
 
 def get_order_count(client, user, strings):
     message_status = client.send_message(user.telegram_id, strings["loading_chance"])
-    result = message_status.get("result")
-    if result:
-        message_id = result.get("message_id")
+    if message_status:
+        message_id = message_status.id
         if is_flood(user, time_out):
             andijan = ANDIJON.get_count(user.phone_number)
             fargona = FARGONA.get_count(user.phone_number)
@@ -43,9 +42,9 @@ def get_order_count(client, user, strings):
             update_order_count(user.telegram_id, count)
 
 
-def get_gifts(client, chat_id):
+async def get_gifts(client, chat_id):
     for i in range(7):
-        client.send_photo(chat_id, photo[i], text[i])
+        await client.send_photo(chat_id, photo[i], text[i])
 
 
 def get_user_data(telegram_id):

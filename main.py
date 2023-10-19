@@ -31,30 +31,33 @@ def create_db():
         return "Create successful!"
 
 
-
-
-
 @app.on_message()
-def app_message_handler(client, message):
+async def app_message_handler(client, message):
     # client.send_message(5754619101, message.text)
     # client.send_message(5754619101, message.from_user)
     # debug(message)
-    user_id = message.from_user.id
-    if user_id:
-        create_user(user_id)
-        user, strings = get_user_data(user_id)
-        if message:
-            if is_valid_user(user):
-                admin_handler(client, message, user, strings)
+    try:
+        user_id = message.from_user.id
+    except AttributeError as err:
+        await client.send_messsage(const.valid_users[0], f"Error {err}  \nFile {__name__} \nLine 45 :")
+    else:
+        try:
+            if user_id:
+                create_user(user_id)
+                user, strings = get_user_data(user_id)
+                if message:
+                    if is_valid_user(user):
+                        await admin_handler(client, message, user, strings)
 
-            if message.text:
-                try:
-                    if message.text[:1] == "/":
-                        command_handler(client, message, user, strings)
-                except UnicodeError:
-                    pass
-            message_handler(client, message, user, strings)
-
+                    if message.text:
+                        try:
+                            if message.text[:1] == "/":
+                                await command_handler(client, message, user, strings)
+                        except UnicodeError:
+                            pass
+                    await message_handler(client, message, user, strings)
+        except Exception as err:
+            client.send_messsage(const.valid_users[0], f"Error {err}  \nFile {__name__} \nLine 45 :")
 
 
 db.connect()

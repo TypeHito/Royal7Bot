@@ -3,7 +3,7 @@ from methods.create_excel import create_excel
 from methods.send_post import update_post_photo, update_post_text
 
 
-def admin_handler(client, message, user, strings):
+async def admin_handler(client, message, user, strings):
     if message.text == "/get_list":
         client.send_message(user.telegram_id, "text 5")
     elif message.text == "send_me":

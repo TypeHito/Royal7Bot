@@ -7,7 +7,7 @@ from src.const import time_out, valid_users, banner
 import threading
 
 
-def message_handler(client, message, user, strings):
+async def message_handler(client, message, user, strings):
     contact = message.contact
     if user.current_menu == "send_contact":
         if contact:
@@ -15,17 +15,17 @@ def message_handler(client, message, user, strings):
             users.update_phone_number(user.telegram_id, phone_number)
             users.update_current_menu(user.telegram_id, "main_menu")
             if is_valid_user(user):
-                client.send_message(user.telegram_id, strings["login"], reply_markup=main_manu(strings, True))
+                await client.send_message(user.telegram_id, strings["login"], reply_markup=main_manu(strings, True))
             else:
-                client.send_message(user.telegram_id, strings["login"], reply_markup=main_manu(strings))
+                await client.send_message(user.telegram_id, strings["login"], reply_markup=main_manu(strings))
     elif user.phone_number:
         if message.text == strings["main_menu_1"]:
             if is_flood(user, time_out):
                 threading.Thread(target=get_order_count, args=(client, user, strings)).start()
         elif message.text == strings["main_menu_2"]:
-            get_gifts(client, user.telegram_id)
+            await get_gifts(client, user.telegram_id)
         elif message.text == strings["main_menu_3"]:
-            client.send_photo(user.telegram_id, banner, strings["gifts"])
+            await client.send_photo(user.telegram_id, banner, strings["gifts"])
     else:
-        start(client, user, strings)
+        await start(client, user, strings)
 
