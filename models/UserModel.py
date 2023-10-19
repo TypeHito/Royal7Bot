@@ -51,28 +51,3 @@ class User:
             self.create_at
         )
 
-
-class Message:
-    def __init__(self, message_id=None, chat=None, date=None, forward_from=None,
-                 forward_date=None, video=None, contact=None, caption=None,
-                 reply_to_message=None, text=None, location=None, photo=None, **kwarg):
-        self.message_id = message_id,
-        self.chat = chat,
-        self.date = date,
-        self.forward_from = forward_from,
-        self.forward_date = forward_date,
-        self.video = video,
-        self.contact = contact,
-        self.photo = photo
-        self.caption = caption,
-        self.reply_to_message = reply_to_message,
-        self.text = text
-        self.location = location
-        # self.__dict__.update(**kwarg)
-
-
-class CallbackQuery:
-    def __init__(self, message=None, chat_instance=None, data=None, **kwargs):
-        self.message = message
-        self.chat_instance = chat_instance
-        self.data = data
