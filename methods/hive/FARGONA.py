@@ -4,7 +4,7 @@ from urllib3.exceptions import InsecureRequestWarning
 import requests
 
 USERNAME = 'hoji2'
-PASSWORD = 'hojiakbar2101200518'
+PASSWORD = 'ddsak34964364'
 API_HOST = "https://royaltaxi-fargona.hivelogin.ru"
 
 HEADERS = {
