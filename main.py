@@ -60,7 +60,9 @@ async def app_message_handler(client, message):
             client.send_messsage(const.valid_users[0], f"Error {err}  \nFile {__name__} \nLine 45 :")
 
 
-db.connect()
+def main():
+    db.connect()
+    app.run()
 
 
 if __name__ == '__main__':
