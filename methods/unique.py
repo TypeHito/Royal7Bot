@@ -1,14 +1,9 @@
 from methods.hive import ANDIJON, FARGONA
-from database.users import update_order_count
-from database.users import update_last_sms, get_user
-from models.UserModel import User
-import datetime
 from methods.language import load_lang
-from database.users import create_user
-from database.users import get_all_users_id
-from src.const import valid_users, photo, text, time_out
-# from models.video_text_button import video_content_r7
-import time
+from models.UserModel import User
+from database.users import update_order_count, update_last_sms, create_user, get_user
+from src.const import action_photo, action_text, time_out
+import datetime
 
 
 def is_flood(user, in_time_out):
@@ -44,7 +39,7 @@ def get_order_count(client, user, strings):
 
 async def get_gifts(client, chat_id):
     for i in range(7):
-        await client.send_photo(chat_id, photo[i], text[i])
+        await client.send_photo(chat_id, action_photo[i], action_text[i])
 
 
 def get_user_data(telegram_id):
@@ -56,39 +51,3 @@ def get_user_data(telegram_id):
         create_user(telegram_id)
         return get_user_data(telegram_id)
     return user, strings
-
-
-def send_me():
-    users = get_all_users_id()
-    count = 0
-    # send_message(valid_users[0], "Start Posting")
-    # video_content_r7(valid_users[0])
-    # threading.Thread(target=video_content_r7, args=valid_users[0]).start()
-    # for i in users:
-        # video_content_r7(v)
-        # threading.Thread(target=video_content_r7, args=valid_users[0]).start()
-        # count += 1
-        # if count % 1000 == 0:
-        #     send_message(valid_users[0], f"Post message count: {count}")
-        #     time.sleep(1)
-    # send_message(valid_users[0], "End Posting")
-#
-
-# def send_all():
-#     users = get_all_users_id()
-#     count = 0
-#     thread = 0
-#     # for i in valid_users:
-#     #     send_message(i, f"Start Posting: {len(users)}")
-#     for user in users:
-#         if thread > 10:
-#             thread += 1
-#         if count > 29000:
-#             print(video_content_r7(user[0]))
-#         # threading.Thread(target=video_content_r7, args=user[0]).start()
-#         count += 1
-#         if count % 1000 == 0:
-#             for i in valid_users:
-#                 send_message(i, f"Sended message count: {count}")
-#     for i in valid_users:
-#         send_message(i, "End Posting!")
