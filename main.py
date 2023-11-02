@@ -63,24 +63,24 @@ async def app_message_handler(client, message):
     except AttributeError as err:
         await client.send_messsage(const.valid_users[0], f"Warning 60 line: {err}")
     else:
-        try:
-            if user_id:
-                create_user(user_id)
-                user, strings = get_user_data(user_id)
-                if message:
-                    if is_valid_user(user):
-                        await admin_handler(client, message, user, strings)
+        # try:
+        if user_id:
+            create_user(user_id)
+            user, strings = get_user_data(user_id)
+            if message:
+                if is_valid_user(user):
+                    await admin_handler(client, message, user, strings)
 
-                    if message.text:
-                        try:
-                            if message.text[:1] == "/":
-                                await command_handler(client, message, user, strings)
-                        except UnicodeError:
-                            pass
-                    await message_handler(client, message, user, strings)
-        except Exception as err:
-            print("Warning! 78 line: ", err)
-            pass
+                if message.text:
+                    try:
+                        if message.text[:1] == "/":
+                            await command_handler(client, message, user, strings)
+                    except UnicodeError:
+                        pass
+                await message_handler(client, message, user, strings)
+        # except Exception as err:
+        #     print("Warning! 78 line: ", err)
+        #     pass
 
 
 def main():

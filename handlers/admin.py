@@ -14,7 +14,8 @@ async def admin_handler(client, message, user, strings):
         await client.send_document(user.telegram_id, f'files_excel/user_date_{user.telegram_id}.xlsx')
     elif message.text == "/send_me":
         button = menu_keyboards.get_start("🗝 Imkonyatlarni tekshirish", "🔄Botni yangilash")
-        await send_post(client, const.valid_users, "photo", const.last_post_text, const.last_post, button)
+
+        await send_post(client, const.valid_users_res, "photo", const.last_post_text, const.last_post, button)
     elif message.text == "/send_all":
         button = menu_keyboards.get_start("🗝 Imkonyatlarni tekshirish", "🔄Botni yangilash")
         await send_post(client, get_all_users_id(), "photo", const.last_post_text, const.last_post, button)

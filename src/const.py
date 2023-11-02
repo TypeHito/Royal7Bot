@@ -12,6 +12,7 @@ test_session_name = "bot_test"
 valid_chats = [5754619101, 685051853, 545050591]
 # valid_users = [5754619101, 685051853]
 valid_users = [5754619101, 685051853, 545050591]
+valid_users_res = [(5754619101, ), (151534548,)]
 
 
 time_out = 3
