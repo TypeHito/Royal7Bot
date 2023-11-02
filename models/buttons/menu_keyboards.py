@@ -8,8 +8,13 @@ def request_contact_button(text):
 
 
 def ok_cancel(ok, cancel):
-    kb = [[InlineKeyboardButton(ok)], [InlineKeyboardButton(cancel)]]
-    return InlineKeyboardMarkup(kb)
+    kb = [InlineKeyboardButton("ok", ok), InlineKeyboardButton("cancel", cancel)]
+    return InlineKeyboardMarkup([kb])
+
+
+def get_start(get, start):
+    kb = [InlineKeyboardButton(get, "get"), InlineKeyboardButton(start, "start")]
+    return InlineKeyboardMarkup([kb])
 
 
 def main_manu(strings, is_admin=False):

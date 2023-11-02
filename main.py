@@ -4,6 +4,7 @@ from database.users import create_user, create_user_table
 from handlers.admin import admin_handler
 from handlers.command import command_handler
 from handlers.message import message_handler
+from handlers.callback_query import callback_query_handler
 from methods.auth import is_valid_user
 from methods.unique import get_user_data
 from pyrogram import Client
@@ -11,10 +12,15 @@ from src import const
 dir_path = os.path.dirname(os.path.realpath(__file__))
 os.chdir(dir_path)
 
+# app = Client(
+#     "sessions/" + const.session_name,
+#     api_id=const.api_id, api_hash=const.api_hash,
+#     bot_token=const.bot_token
+# )
 app = Client(
-    "sessions/" + const.session_name,
-    api_id=const.api_id, api_hash=const.api_hash,
-    bot_token=const.bot_token
+    "sessions/" + const.test_session_name,
+    api_id=const.test_api_id, api_hash=const.test_api_hash,
+    bot_token=const.test_bot_token
 )
 
 
@@ -31,6 +37,22 @@ def create_db():
         return "Create successful!"
 
 
+@app.on_callback_query()
+async def app_callback_handler(client, callback):
+    print(client)
+    print(callback)
+    # debug(message)
+    try:
+        user_id = callback.from_user.id
+    except AttributeError as err:
+        print(f"Warning: {err}  \nFile {__name__} \nLine 43 :")
+    else:
+        try:
+            await callback_query_handler(client, callback)
+        except Exception as err:
+            print(f"Warning: {err}  \nFile {__name__} \nLine 49 :")
+
+
 @app.on_message()
 async def app_message_handler(client, message):
     # client.send_message(5754619101, message.text)
@@ -39,7 +61,7 @@ async def app_message_handler(client, message):
     try:
         user_id = message.from_user.id
     except AttributeError as err:
-        await client.send_messsage(const.valid_users[0], f"Error {err}  \nFile {__name__} \nLine 45 :")
+        await client.send_messsage(const.valid_users[0], f"Warning 60 line: {err}")
     else:
         try:
             if user_id:
@@ -57,18 +79,19 @@ async def app_message_handler(client, message):
                             pass
                     await message_handler(client, message, user, strings)
         except Exception as err:
-            client.send_messsage(const.valid_users[0], f"Error {err}  \nFile {__name__} \nLine 45 :")
+            print("Warning! 78 line: ", err)
+            pass
 
 
 def main():
+    print("Connecting to DataBase")
     db.connect()
+    create_db()
+    print("Connecting to DataBase ✅")
+    print("Bot launching ")
     app.run()
 
 
 if __name__ == '__main__':
-    print("Bot launching")
-    # app.start()
-    # app.send_message(5754619101, create_db())
-    # app.stop()
-    app.run()
+    main()
 

@@ -1,4 +1,4 @@
-import json
+import create_json
 
 
 valid_langs = ["uz"]

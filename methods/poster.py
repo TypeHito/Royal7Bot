@@ -1,5 +1,6 @@
 from src.const import valid_users
 from pyrogram.errors import PeerIdInvalid
+import json
 
 
 def send_current(client, count):
@@ -8,7 +9,7 @@ def send_current(client, count):
             client.send_message(i, f"Sended message count: {count}")
 
 
-def post_message(client, receivers, text):
+def post_message(client, receivers, text, keyboard):
     count = 0
     for receiver in receivers:
         try:
@@ -21,14 +22,22 @@ def post_message(client, receivers, text):
 
 def post_photo(client, receivers, photo, text, keyboard):
     count = 0
+    incorrect = {}
+    for i in valid_users:
+        client.send_message(i, f"start posting: {len(receivers)}")
+
     for receiver in receivers:
         try:
-            client.send_photo((receiver[0]), photo, text, reply_markup=keyboard)
-        except PeerIdInvalid:
-            pass
-
+            client.send_photo(receiver[0], photo, text, reply_markup=keyboard)
+        except (PeerIdInvalid, Exception) as err:
+            incorrect[receiver] = str(err)
         count += 1
         send_current(client, count)
+    with open("errors.json", "w") as f:
+        json.dump(incorrect, f, indent=2)
+
+    for i in valid_users:
+        client.send_message(i, f"Posting End: \nPosted: {len(receivers)}\nCan'tPost count: {len(incorrect) }")
 
 
 def post_video(client, receivers, video, text, keyboard):
