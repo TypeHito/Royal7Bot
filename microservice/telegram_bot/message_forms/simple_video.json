@@ -1,0 +1,46 @@
+
+{
+    "update_id": 365873324,
+    "message": {
+        "message_id": 472123,
+        "from": {
+            "id": 5754619101,
+            "is_bot": false,
+            "first_name": "人",
+            "username": "SardorbekSirojiddinov",
+            "language_code": "ru",
+            "is_premium": true
+        },
+        "chat": {
+            "id": 5754619101,
+            "first_name": "人",
+            "username": "SardorbekSirojiddinov",
+            "type": "private"
+        },
+        "date": 1695922914,
+        "video": {
+            "duration": 61,
+            "width": 480,
+            "height": 854,
+            "file_name": "video_2023-09-28_18-09-16.mp4",
+            "mime_type": "video/mp4",
+            "thumbnail": {
+                "file_id": "AAMCAgADGQEAAQc0O2UVuuLM0keYGZJV3vtbzKsAAbkf_QACvTMAAlvzsUg8mTn3PTbaSgEAB20AAzAE",
+                "file_unique_id": "AQADvTMAAlvzsUhy",
+                "file_size": 11051,
+                "width": 180,
+                "height": 320
+            },
+            "thumb": {
+                "file_id": "AAMCAgADGQEAAQc0O2UVuuLM0keYGZJV3vtbzKsAAbkf_QACvTMAAlvzsUg8mTn3PTbaSgEAB20AAzAE",
+                "file_unique_id": "AQADvTMAAlvzsUhy",
+                "file_size": 11051,
+                "width": 180,
+                "height": 320
+            },
+            "file_id": "BAACAgIAAxkBAAEHNDtlFbrizNJHmBmSVd77W8yrAAG5H_0AAr0zAAJb87FIPJk59z022kowBA",
+            "file_unique_id": "AgADvTMAAlvzsUg",
+            "file_size": 8604489
+        }
+    }
+}
