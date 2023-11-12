@@ -43,14 +43,9 @@ async def app_callback_handler(client, callback):
     print(callback)
     # debug(message)
     try:
-        user_id = callback.from_user.id
-    except AttributeError as err:
-        print(f"Warning: {err}  \nFile {__name__} \nLine 43 :")
-    else:
-        try:
-            await callback_query_handler(client, callback)
-        except Exception as err:
-            print(f"Warning: {err}  \nFile {__name__} \nLine 49 :")
+        await callback_query_handler(client, callback)
+    except Exception as err:
+        print(f"Warning: {err}  \nFile {__name__} \nLine 48 :")
 
 
 @app.on_message()

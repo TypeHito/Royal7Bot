@@ -12,25 +12,44 @@ test_session_name = "bot_test"
 valid_chats = [5754619101, 685051853, 545050591]
 # valid_users = [5754619101, 685051853]
 valid_users = [5754619101, 685051853, 545050591]
-valid_users_res = [(5754619101, ), (151534548,)]
+valid_users_res = [(5754619101, ), (545050591,), (151534548,)]
 
 
 time_out = 3
 banner = "https://i.ibb.co/gbYcMD0/action.jpg"
-last_post = "https://i.ibb.co/ngrsVhC/photo-2023-11-01-17-16-41.jpg"
+last_post = "https://i.ibb.co/0YWcS5S/image.png"
+# last_post = "https://i.ibb.co/ngrsVhC/photo-2023-11-01-17-16-41.jpg"
 
-last_post_text = """⚡️Shoshiling! vaqt oz qoldi
+last_post_text = """⚡️ Aksiya muddati yakunlandi
 
-🎁 Aksiya tugashiga sanoqli kunlar qoldi. Qimmatbaho sovg'alardan biriga ega bo'lish uchun o'z imkoniyatlaringizni oshiring
+🎉 Random.org tizimi orqali "Omadli 7" aksiya ishtirokchilari orqasidan g'oliblarni aniqlash hamda shou konsert dasturi 12- Noyabr Andijon shahar "Navruz Mall" savdo majmuasida bo'lib o'tadi! 🤩 Sizni qimmatbaho sovg'alar va ajoyib shou kutmoqda
 
-😊O'z imkoniyatlaringizni @royaltaxi7bot orqali tekshirib boring, 7 va dan ko'p buyurtmalar, shuncha ko'p imkoniyatlar 
+🎤Dastur mehmonlari
+Shohrux Ergashev
+DJ Endigo
 
-☎️ 1187 Qo'ng'iroq bepul
+📷 Shouga tashrif buyuring yoki bizning ijtimoiy tarmoqlar orqali jonli efirda kuzatib boring
+
+Eslatib o'tamiz:
+G'oliblarni aniqlash ma'rosimiga tashrif buyura olmagan ichtirokchilar ham albatta g'olib bo'lishlari mumkin.
+RoyalTaxi'ning barcha mijozlari g'olib bo'lish imkoniyatiga ega
 
 @RoyalTaxi"""
+# last_post_text = """⚡️Shoshiling! vaqt oz qoldi
+#
+# 🎁 Aksiya tugashiga sanoqli kunlar qoldi. Qimmatbaho sovg'alardan biriga ega bo'lish uchun o'z imkoniyatlaringizni oshiring
+#
+# 😊O'z imkoniyatlaringizni @royaltaxi7bot orqali tekshirib boring, 7 va dan ko'p buyurtmalar, shuncha ko'p imkoniyatlar
+#
+# ☎️ 1187 Qo'ng'iroq bepul
+#
+# @RoyalTaxi"""
 
 action_text = ["7 ta Umra ziyoratiga yo'llanma\n(super sovrin)", "7 ta Televizor", "7 ta Smartfon", "7 ta Aqlli soat",
         "7 ta Simsiz quloqchin", "7 ta Qo'l soat", "7 ta Vaucher"
+]
+gift_text = ["Umra ziyoratiga yo'llanma (super sovrin)", "Televizor", "Smartfon", "Aqlli soat",
+        "Simsiz quloqchin", "Qo'l soat", "Vaucher"
 ]
 
 action_photo = [

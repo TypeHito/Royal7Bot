@@ -1,6 +1,8 @@
 from src.const import valid_users
 from pyrogram.errors import PeerIdInvalid
 import json
+from src import const
+from models.buttons import menu_keyboards
 
 
 async def send_current(client, count):
@@ -64,3 +66,12 @@ async def send_post(client, receivers, message_type, text=None, media=None, keyb
     # for i in valid_users:
     #     client.send_message(i, "End Posting!")
 
+
+async def send_me(client):
+    button = menu_keyboards.get_start("🗝 Imkonyatlarni tekshirish", "🔄Botni yangilash")
+    await send_post(client, const.valid_users_res, "photo", const.last_post_text, const.last_post, button)
+
+
+async def send_all(client, users):
+    button = menu_keyboards.get_start("🗝 Imkonyatlarni tekshirish", "🔄Botni yangilash")
+    await send_post(client, users, "photo", const.last_post_text, const.last_post, button)

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="183c4f0e-3266-4fdc-9d93-790b0d1e4122" name="Changes" comment="">
+    <list default="true" id="183c4f0e-3266-4fdc-9d93-790b0d1e4122" name="Changes" comment="Realise Polling ver 004.3">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handlers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/methods/poster.py" beforeDir="false" afterPath="$PROJECT_DIR$/methods/poster.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sessions/bot_test.session" beforeDir="false" afterPath="$PROJECT_DIR$/sessions/bot_test.session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sessions/bot_test.session-journal" beforeDir="false" afterPath="$PROJECT_DIR$/sessions/bot_test.session-journal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sessions/bot_test.session-journal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/const.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
       <recent name="D:\NoneType\Dev\Telegram\Royal7\models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.poster">
     <configuration name="create_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Royal7" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,6 +86,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="poster" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Royal7" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/microservice" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/microservice/poster.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,6 +180,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.poster" />
         <item itemvalue="Python.create_json" />
         <item itemvalue="Python.service_poster (1)" />
         <item itemvalue="Python.service_poster" />
@@ -223,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698903090483</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Realise Polling ver 004.3">
+      <created>1698903892048</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698903892048</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -233,6 +263,7 @@
     <MESSAGE value="Realise Polling ver 004.0" />
     <MESSAGE value="Realise Polling ver 004.1" />
     <MESSAGE value="Realise Polling ver 004.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Realise Polling ver 004.2" />
+    <MESSAGE value="Realise Polling ver 004.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Realise Polling ver 004.3" />
   </component>
 </project>
