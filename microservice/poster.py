@@ -49,20 +49,18 @@ def send_me():
 
 
 def send_one(user_id, gift_id):
-    status = ""
+    status = f"Correctly Send to {user_id}"
     send = False
     try:
         if 1 <= gift_id <= 7:
             current = gift_id-1
-            msg = send_photo(user_id, action_photo[current], gift_text[current], reply_markup=buttons())
+            msg = send_photo(user_id, action_photo[current], gift_text[current])
             send = msg['ok']
-            if not send:
-                status = "Error:" + str(user_id) + ":" + str(msg)
-            time.sleep(2)
             for i in valid_users:
                 send_photo(i, action_photo[current],
-                           str(f"user_id {user_id}:\n" + str(gift_text[current]) + f"\nsend status: {send}"),
-                           reply_markup=buttons())
+                           f"""{gift_text[current]} \n\nsend status: {send}\nuserID: {user_id}""")
+            if not send:
+                status = "Error:" + str(user_id) + ":" + str(msg)
         else:
             status = "Error: Index gift_id out of range"
 
@@ -119,7 +117,12 @@ def main():
         count += 1
 
     user_gift_input = int(input("gift_id: "))
-    send_one(user_id_input, user_gift_input)
+    if 1<= user_gift_input <=7:
+        are_you_sure = input(f"{user_id_input}:{gift_text[user_gift_input-1]}: (y/n)")
+        if are_you_sure == "y":
+            send_one(user_id_input, user_gift_input)
+    else:
+        raise IndexError("Index Gift out of range\n mustbe from 1 to 7")
 
 
 while True:
